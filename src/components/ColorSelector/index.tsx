@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import * as C from "./style";
 import { ColorType } from "../../types/theme";
 
-import { BLUE_COLOR } from "../../style/colors/blue";
-import { ORANGE_COLOR } from "../../style/colors/orange";
+import colors from '../../style/colors/colors';
 
 type props ={
     currentColor: ColorType,
@@ -20,16 +19,16 @@ const ColorSelector = ({currentColor, setCurrentColor} :props) => {
         <C.Container className={active ? "active" : ""}>
             <C.Head onClick={()=> setActive(state => !state)} />
             <C.Content>
-                <C.Color 
-                    onClick={()=> changeColor(BLUE_COLOR)}
-                    color={BLUE_COLOR.main} 
-                    className={activeColor(BLUE_COLOR) ? "active" : ""}
-                />
-                <C.Color 
-                    onClick={()=> changeColor(ORANGE_COLOR)}
-                    color={ORANGE_COLOR.main} 
-                    className={activeColor(ORANGE_COLOR) ? "active" : ""}
-                />
+                {
+                    colors.map((color, index)=> (
+                        <C.Color 
+                            key={index}
+                            onClick={()=> changeColor(color)}
+                            color={color.main} 
+                            className={activeColor(color) ? "selected" : ""}
+                        />
+                    ))
+                }
             </C.Content>
         </C.Container>
     )

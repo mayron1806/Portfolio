@@ -4,10 +4,10 @@ export const Container = styled.section`
     display: flex;
     align-items: center;
     color: ${props => props.theme.primary};
-    transform: translateX(65%);
+    transform: translateX(calc(100% - 55px));
     transition: 0.5s ease;
     &.active{
-        transform: translateX(-10%); 
+        transform: translateX(-10px); 
     }
 `;  
 export const Head = styled(BiBrushAlt)` 
@@ -37,7 +37,7 @@ export const Color = styled.div<{color: string}>`
     border-radius: 50%;
     cursor: pointer;
     position: relative;
-    &.active{
+    &.selected{
         ::before{
             content: "";
             width: 110%;

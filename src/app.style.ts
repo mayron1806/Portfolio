@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import wave from "./assets/waves/wave.svg";
-
 export const App = styled.div`
     width: 100%;
     min-height: 100vh;
@@ -15,6 +13,7 @@ export const App = styled.div`
         z-index: 10;
         display: flex;
         flex-direction: column;
+        align-items: flex-end;
         gap: 1rem;
     }
 `;
