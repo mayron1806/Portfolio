@@ -5,13 +5,7 @@ import {IoIosArrowForward, IoIosArrowBack} from "react-icons/io";
 export const Container = styled.div`
     background-color: ${props => props.theme.main};
     padding: 0 2rem;
-    padding-bottom: 50rem;
     position: relative;
-`;
-export const Title = styled.h2`
-    font-size: 4rem;
-    font-family: 'Roboto Slab', serif;
-    color: ${props => props.theme.primary};
 `;
 export const Content = styled.div`
     position: relative;

@@ -3,6 +3,7 @@ import { TechsType, TechType } from "../../types/tech";
 import * as C from "./style";
 import TechItem from "../TechItem";
 import { getTechs } from "../../services/Tech";
+import Title from "../Title";
 
 enum Direction {
     LEFT,
@@ -43,7 +44,7 @@ const Techs = () => {
     }
     return(
         <C.Container id="tech">
-            <C.Title >Tecnologias</C.Title>
+            <Title>Tecnologias</Title>
             <C.Content>
                 <C.TechsContent ref={techContainerRef}>
                     {
