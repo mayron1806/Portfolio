@@ -19,22 +19,5 @@ export const App = styled.div`
 `;
 export const Main = styled.main`
     height: calc(100vh - 50px);
-    max-width: 100vw;
-    overflow: hidden;
-    padding: 0 2rem;
-    padding-top: 15%;
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    gap: 2rem;
-    position: relative;
-    background-color: ${props => props.theme.primary};
-    .wave{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        path{
-            fill: ${props => props.theme.main};
-        }
-    }
+    width: 100%;
 `;

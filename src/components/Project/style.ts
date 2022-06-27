@@ -25,6 +25,7 @@ export const Title = styled.h3`
     grid-area: title;
     font-size: 2.5rem;
     font-weight: 600;
+    font-family: 'Roboto Slab', serif;
 `;
 export const Description = styled.p`
     grid-area: description;

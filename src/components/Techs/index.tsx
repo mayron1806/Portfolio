@@ -4,6 +4,7 @@ import * as C from "./style";
 import TechItem from "../TechItem";
 import { getTechs } from "../../services/Tech";
 import Title from "../Title";
+import Section from "../Section";
 
 enum Direction {
     LEFT,
@@ -16,18 +17,19 @@ const scroll = (element: HTMLDivElement, direction: Direction) => {
 }
 const Techs = () => {
     const [techs, setTechs] = useState<TechsType>([]);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
     const techContainerRef = useRef<HTMLDivElement | null>(null);
     
-    const [leftScrollArrows, setLeftScrollArrows] = useState<boolean>(true);
-    const [rightScrollArrows, setRightScrollArrows] = useState<boolean>(true);
     
     // pega as tecnologias no banco
     useEffect(()=>{
+        setIsLoading(true);
         getTechs()
         .then((res)=>{
             // ordena o array de acordo com a propriedade "order" do objeto
             res.sort((a : TechType, b : TechType) => a.order - b.order);
             setTechs(res);
+            setIsLoading(false);
         })  
         .catch(error =>{
             console.log(error)
@@ -43,22 +45,25 @@ const Techs = () => {
         scroll(techContainerRef.current, Direction.RIGHT);
     }
     return(
-        <C.Container id="tech">
-            <Title>Tecnologias</Title>
+        <Section title="Tecnologias">
             <C.Content>
-                <C.TechsContent ref={techContainerRef}>
-                    {
-                        techs.map((tech, index)=> (
-                            <TechItem key={index} tech={tech}/>
-                        ))
-                    }
-                </C.TechsContent>
-                <div>
-                    {leftScrollArrows && <C.DownButton onClick={() => leftScroll()} />}
-                    {rightScrollArrows && <C.UpButton onClick={() => rightScroll()} />}
-                </div>
-            </C.Content>
-        </C.Container>
+            <C.TechsContent ref={techContainerRef}>
+                {
+                    !isLoading &&
+                    techs.map((tech, index)=> (
+                        <TechItem key={index} tech={tech}/>
+                    ))
+                    ||
+                    <C.Loading>Carregando</C.Loading>
+                }
+            </C.TechsContent>
+            <div>
+                <C.DownButton onClick={() => leftScroll()} />
+                <C.UpButton onClick={() => rightScroll()} />
+            </div>
+        </C.Content>
+        </Section>
+        
     )
 }
 export default Techs;

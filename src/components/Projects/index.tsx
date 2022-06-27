@@ -1,15 +1,14 @@
 import Project from "../Project";
-import Title from "../Title";
-import * as C from "./style";
+import Section from "../Section";
 
 const Projects = () => {
     return(
-        <C.Container>
-            <Title>Projetos</Title>
-            <C.Content>
+        <Section title="Projetos">
+            <>
                 <Project />
-            </C.Content>
-        </C.Container>
+                <Project />
+            </>
+        </Section>
     )
 }
 export default Projects;

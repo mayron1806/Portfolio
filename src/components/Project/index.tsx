@@ -2,9 +2,6 @@ import * as C from "./style";
 import img from "../../assets/project-image.png";
 import { useEffect, useRef, useState } from "react";
 type props = {
-    title: string,
-    description: string,
-    imagesURL: string[] 
     siteURL?: string,
     gitURL?: string,
     imageLeft?: boolean

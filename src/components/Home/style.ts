@@ -1,5 +1,27 @@
 import styled from "styled-components";
-const Button = styled.a`
+
+export const Container = styled.div`
+    height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 2rem;
+    padding-top: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 2rem;
+    position: relative;
+    background-color: ${props => props.theme.primary};
+    .wave{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        path{
+            fill: ${props => props.theme.main};
+        }
+    }
+`;
+export const Link = styled.a`
     color: ${props => props.theme.secondary};
     font-size: 2rem;
     background-color: transparent;
@@ -30,11 +52,3 @@ const Button = styled.a`
         border: 2px solid ${props => props.theme.main};
     }
 `;
-const ContactButton = () => {
-    return(
-        <Button href="#">
-            Contate-me
-        </Button>
-    )
-}
-export default ContactButton;
