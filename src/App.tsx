@@ -15,6 +15,7 @@ import { ThemeProvider } from "styled-components";
 
 import * as C from "./app.style";
 import Section from "./components/Section";
+import Contact from "./components/Contact";
 
 const App = ()=> { 
   const [currentTheme, setCurrentTheme] = useState<ThemeType>(LIGHT_THEME);
@@ -40,6 +41,7 @@ const App = ()=> {
           <Techs />
           <Projects />
           <About />
+          <Contact/>
         </div>
         {/* END CONTENT */}
       </C.App>
