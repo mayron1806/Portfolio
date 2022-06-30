@@ -3,7 +3,6 @@ import { TechsType, TechType } from "../../types/tech";
 import * as C from "./style";
 import TechItem from "../TechItem";
 import { getTechs } from "../../services/Tech";
-import Title from "../Title";
 import Section from "../Section";
 
 enum Direction {

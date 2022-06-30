@@ -23,6 +23,7 @@ const activeMenu = () => {
     `;
 }
 export const MenuToggle = styled.div<{active: boolean}>`
+    z-index: 100;
     position: absolute;
     top: 0;
     right: 0;
@@ -50,11 +51,12 @@ export const MenuContent = styled.div`
     justify-content: space-between;
     align-items: center;
     position: relative;
+    z-index: 10;
     @media (max-width: 700px){
         position: absolute;
         left: 0;
         top: 0;
-        width: 100vw;
+        width: 100%;
         height: 100vh;
         background-color: ${props => props.theme.main};
         flex-direction: column;

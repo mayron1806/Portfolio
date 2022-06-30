@@ -5,6 +5,14 @@ export const Text = styled.h1`
     font-family: 'Roboto Slab', serif;
     font-size: 5rem;
     line-height: 5.8rem;
+    @media (max-width: 750px){
+        font-size: 4rem;
+        line-height: 4.8rem;
+    }
+    @media (max-width: 450px){
+        font-size: 3.5rem;
+        line-height: 4.3rem;
+    }
 `;
 const textAnim = keyframes`
     0%{

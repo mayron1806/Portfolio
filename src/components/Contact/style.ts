@@ -1,9 +1,9 @@
 import styled, { css } from "styled-components";
-import {AiOutlineMail, AiOutlinePhone} from "react-icons/ai";
+import {AiOutlineMail} from "react-icons/ai";
 import {GoLocation} from "react-icons/go";
+import {IoLogoWhatsapp} from "react-icons/io5";
 export const Content = styled.div`
     color: ${props => props.theme.primary};
-    padding: 0 2rem;
     display: grid;
     grid-gap: 2rem;
     grid-template-columns: 60% 1fr;
@@ -11,6 +11,16 @@ export const Content = styled.div`
     "text text"
     "form contact";
     padding-bottom: 5rem;
+    @media (max-width: 850px){
+        grid-template-columns: 50% 50%;
+    }
+    @media (max-width: 750px){
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "text"
+        "form"
+        "contact";
+    }
 `;
 export const Text = styled.p`
     grid-area: text;
@@ -30,7 +40,7 @@ export const Input = styled.div`
         position: absolute;
         left: 2%;
         top: 0;
-        transform: translateY(50%);
+        transform: translateY(70%);
         color: ${props => props.theme.primary};
         font-size: 2rem;
         padding: 0 0.5rem;
@@ -46,6 +56,13 @@ export const Input = styled.div`
         border: 3px solid ${props => props.theme.primary};
         background-color: transparent;
         color: ${props => props.theme.primary};
+        transition: 0.5s;
+        &.error{
+            border-color: red;
+        }
+    }
+    textarea{
+        resize: none;
     }
     input::placeholder, textarea::placeholder{
         color: ${props => props.theme.gray};
@@ -56,6 +73,11 @@ export const Input = styled.div`
             transform: translateY(-50%);
         }
     }
+`;
+export const ErrorMessage = styled.p`
+    align-self: flex-start;
+    color: red;
+    font-size: 1.6rem;
 `;
 export const Submit = styled.button`
     position: relative;
@@ -86,15 +108,13 @@ export const Submit = styled.button`
     pointer-events: all;
     color:  ${props => props.theme.main};
     &.no-send{
-        cursor: no-drop;
-        pointer-events: none;
+        cursor: auto;
         background-color: transparent;
         color: ${props => props.theme.primary};
         ::before{
             transform: translate(-50%, -50%) scale(0);
         }
     }
-   
 `;
 export const ContactOptions = styled.div`
     grid-area: contact;
@@ -102,9 +122,12 @@ export const ContactOptions = styled.div`
     flex-direction: column;
 `;
 export const Maps = styled.div`
-    width: 100%;
-    height: 100%;
-    background-color: green;
+
+    @media (min-width: 750px) { aspect-ratio: 1/1; }
+    @media (max-width: 750px) {
+        width: 100%;
+        min-height: 300px;
+    }
 `;
 const icon = css`
     width: 30px;
@@ -117,7 +140,7 @@ export const LocationIcon = styled(GoLocation)`
 export const EmailIcon = styled(AiOutlineMail)`
     ${icon}
 `;
-export const PhoneIcon = styled(AiOutlinePhone)`
+export const PhoneIcon = styled(IoLogoWhatsapp)`
     ${icon}
 `;
 export const Items = styled.div`
@@ -126,11 +149,12 @@ export const Items = styled.div`
     gap: 2rem;
     flex-direction: column;
 `;
-export const InfoItem = styled.div`
+export const InfoItem = styled.a`
     display: flex;
     align-items: center;
     gap: 1rem;
     font-size: 1.6rem;
     cursor: pointer;
     font-weight: 500;
+    color: ${props =>props.theme.primary};
 `;

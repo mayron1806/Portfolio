@@ -1,13 +1,12 @@
 import * as C from "./style";
-import img from "../../assets/project-image.png";
 import { useEffect, useRef, useState } from "react";
 type props = {
     siteURL?: string,
     gitURL?: string,
-    imageLeft?: boolean
+    imageLeft?: boolean,
+    imagesURL?: string[]
 }
-const colors = ["blue", "red", "green"]
-const Project = ({siteURL, gitURL ,imageLeft = false}: props) => {
+const Project = ({siteURL, gitURL, imagesURL = [] ,imageLeft = false}: props) => {
     // carrousel
     const [carrouselIndex, setCarrouselIndex] = useState<number>(0);
 
@@ -38,19 +37,13 @@ const Project = ({siteURL, gitURL ,imageLeft = false}: props) => {
                 porro, inventore illo libero sequi repudiandae?
             </C.Description>
             <C.Buttons>
-                {
-                    siteURL && <C.Link>Site ao vivo</C.Link>
-                }
-                {
-                    gitURL && <C.Link>GitHub</C.Link>
-                }
+                { siteURL && <C.Link>Site ao vivo</C.Link> }
+                { gitURL && <C.Link>GitHub</C.Link> }
             </C.Buttons>
             <C.ImagesContainer ref={imagemContainerRef}>
                 {
-                    colors.map((color, index) => (
-                        <C.Image key={index} src={img}/>
-                    ))
-                }
+                    imagesURL.map((img, index) => (<C.Image key={index} src={img}/>))
+                } 
             </C.ImagesContainer>
         </C.Container>
     )

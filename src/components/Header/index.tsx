@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import  * as C from "./style";
 
 import { 
@@ -10,6 +10,13 @@ import {
 const Header = () => {
     const [mobileMenuActive, setMobileMenuActive] = useState<boolean>(false);
     const menuOptionRef = useRef<HTMLUListElement | null>(null);
+    useEffect(()=>{
+        if(mobileMenuActive){
+            document.body.style.overflow = "hidden";
+        }else{
+            document.body.style.overflow = "unset";
+        }
+    }, [mobileMenuActive])
     
     const changeActiveMenuOption = (option: HTMLLIElement) => {
         if (menuOptionRef.current === null) return; 

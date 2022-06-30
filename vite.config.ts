@@ -8,5 +8,8 @@ export default defineConfig({
   ],
   define: {
     'process.env': {}
+  },
+  server: {
+    host: true
   }
 })

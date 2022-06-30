@@ -4,55 +4,61 @@ import image from "../../assets/project-image.png";
 const About = () => {
     return(
         <C.Container>
-            <svg className="wave top" width="3000" height="60" viewBox="0 0 3000 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 40.0009C0 40.0009 275.992 -47.9984 375 40.0009C474.008 128 750 40.0009 750 40.0009C750 40.0009 1002.36 -44.4981 1125 40.0009C1247.64 124.5 1500 40.0009 1500 40.0009C1500 40.0009 1777.41 -17.4981 1875 40.0009C1972.59 97.5 2250 40.0009 2250 40.0009C2250 40.0009 2472.59 -18.4991 2625 40.0009C2777.41 98.5009 3000 40.0009 3000 40.0009V198.5H0V40.0009Z" fill="#69C3FF"/>
+            <C.Wave>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#0099ff" fill-opacity="1" d="M0,128L48,133.3C96,139,192,149,288,176C384,203,480,245,576,250.7C672,256,768,224,864,197.3C960,171,1056,149,1152,154.7C1248,160,1344,192,1392,208L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
             </svg>
-            <C.Title>Sobre mim</C.Title>
-            <C.Content>
-                <C.Image src={image}/>
-                <C.Info>
-                    <C.Text>
-                        <h3>Eu sou Mayron</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Earum quos ipsa facilis voluptas sunt quia totam fugiat animi. 
-                            Fuga est vitae deserunt quaerat rem culpa numquam nihil provident molestiae? 
-                            Numquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Earum quos ipsa facilis voluptas sunt quia totam fugiat animi. 
-                            Fuga est vitae deserunt quaerat rem culpa numquam nihil provident molestiae? 
-                            Numquam?
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Earum quos ipsa facilis voluptas sunt quia totam fugiat animi. 
-                            Fuga est vitae deserunt quaerat rem culpa numquam nihil provident molestiae? 
-                            Numquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Earum quos ipsa facilis voluptas sunt quia totam fugiat animi. 
-                            Fuga est vitae deserunt quaerat rem culpa numquam nihil provident molestiae? 
-                            Numquam?
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Earum quos ipsa facilis voluptas sunt quia totam fugiat animi. 
-                            Fuga est vitae deserunt quaerat rem culpa numquam nihil provident molestiae? 
-                            Numquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Earum quos ipsa facilis voluptas sunt quia totam fugiat animi. 
-                            Fuga est vitae deserunt quaerat rem culpa numquam nihil provident molestiae? 
-                            Numquam?
-                            
-                        </p>
-                    </C.Text>
-                    <div className="button-container">
-                        <C.Button backgroundColor="#24292D" href="#">
-                            <C.GitHubIcon/>
-                            GitHub
-                        </C.Button>
-                        <C.Button backgroundColor="#0077B5" href="#">
-                            <C.LinkedInIcon/>
-                            LinkedIn
-                        </C.Button>
-                    </div>
-                </C.Info>
-            </C.Content>
-            <svg className="wave bottom" width="3000" height="60" viewBox="0 0 3000 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 40.0009C0 40.0009 275.992 -47.9984 375 40.0009C474.008 128 750 40.0009 750 40.0009C750 40.0009 1002.36 -44.4981 1125 40.0009C1247.64 124.5 1500 40.0009 1500 40.0009C1500 40.0009 1777.41 -17.4981 1875 40.0009C1972.59 97.5 2250 40.0009 2250 40.0009C2250 40.0009 2472.59 -18.4991 2625 40.0009C2777.41 98.5009 3000 40.0009 3000 40.0009V198.5H0V40.0009Z" fill="#69C3FF"/>
-            </svg>
+            </C.Wave>
+            <div className="main">
+                <C.Title>Sobre mim</C.Title>
+                <C.Content>
+                    <C.Image src={image}/>
+                    <C.Info>
+                        <C.Text>
+                            <h3>Eu sou Mayron</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Earum quos ipsa facilis voluptas sunt quia totam fugiat animi. 
+                                Fuga est vitae deserunt quaerat rem culpa numquam nihil provident molestiae? 
+                                Numquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Earum quos ipsa facilis voluptas sunt quia totam fugiat animi. 
+                                Fuga est vitae deserunt quaerat rem culpa numquam nihil provident molestiae? 
+                                Numquam?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Earum quos ipsa facilis voluptas sunt quia totam fugiat animi. 
+                                Fuga est vitae deserunt quaerat rem culpa numquam nihil provident molestiae? 
+                                Numquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Earum quos ipsa facilis voluptas sunt quia totam fugiat animi. 
+                                Fuga est vitae deserunt quaerat rem culpa numquam nihil provident molestiae? 
+                                Numquam?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Earum quos ipsa facilis voluptas sunt quia totam fugiat animi. 
+                                Fuga est vitae deserunt quaerat rem culpa numquam nihil provident molestiae? 
+                                Numquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Earum quos ipsa facilis voluptas sunt quia totam fugiat animi. 
+                                Fuga est vitae deserunt quaerat rem culpa numquam nihil provident molestiae? 
+                                Numquam?
+                                
+                            </p>
+                        </C.Text>
+                        <div className="button-container">
+                            <C.Button backgroundColor="#24292D" href="#">
+                                <C.GitHubIcon/>
+                                GitHub
+                            </C.Button>
+                            <C.Button backgroundColor="#0077B5" href="#">
+                                <C.LinkedInIcon/>
+                                LinkedIn
+                            </C.Button>
+                        </div>
+                    </C.Info>
+                </C.Content>
+            </div>
+            <C.Wave className="reverse">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#0099ff" fill-opacity="1" d="M0,128L48,133.3C96,139,192,149,288,176C384,203,480,245,576,250.7C672,256,768,224,864,197.3C960,171,1056,149,1152,154.7C1248,160,1344,192,1392,208L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                </svg>
+            </C.Wave>
         </C.Container>
     )
 }

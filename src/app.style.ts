@@ -7,6 +7,7 @@ export const App = styled.div`
     position: relative;
     .selectors{
         position: fixed;
+        width: 50px;
         top: 50%;
         transform: translateY(-50%);
         right: 0;

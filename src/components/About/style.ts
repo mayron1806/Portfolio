@@ -4,23 +4,26 @@ import {AiOutlineGithub, AiFillLinkedin} from "react-icons/ai";
 export const Container = styled.div`
     margin: 70px 0;
     position: relative;
-    padding: 4rem 2rem;
-    background-color: ${props => props.theme.main2};
-    svg.wave{
+    .main{
+        padding: 2rem 2rem;
+        background-color: ${props => props.theme.main2};
+    }
+`;
+export const Wave = styled.div`
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    > svg{
         width: 100%;
-        position: absolute;
-        transform: translateY(-100%);
-        left: 0;
+        height: 100%;
+        transform: translateY(5px);
         path{
-            fill: ${props => props.theme.main2};
+            fill: ${props=> props.theme.main2};
         }
     }
-    svg.top{
-        top: 0;
-    }
-    svg.bottom{
-        bottom: 0;
-        transform: translateY(100%) rotate(180deg);
+    &.reverse{
+        transform: rotate(180deg);
     }
 `;
 export const Title = styled.h2`
@@ -32,8 +35,15 @@ export const Content = styled.div`
     margin: 2rem 3rem;
     margin-bottom: 0;
     display: flex;
+    align-items: center;
     gap: 2rem;
-    
+    @media (max-width: 850px){
+        flex-direction: column;
+        > img{
+            width: 50vw;
+            height: 50vw;
+        }
+    }
 `;
 export const Image = styled.img`
     width: 35vw;
@@ -61,6 +71,7 @@ export const Text = styled.div`
     p{
         font-size: 1.6rem;
         text-align: justify;
+        margin-bottom: 1rem;
     }
 `;
 export const Button = styled.a<{backgroundColor: string}>`

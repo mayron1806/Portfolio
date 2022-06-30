@@ -12,7 +12,6 @@ export default createGlobalStyle`
         /*font-family: 'Roboto Slab', serif;*/
         font-family: 'Ubuntu', sans-serif;
         scroll-behavior: smooth;
-        
     }
     :root{
         --blue: #0887DC;

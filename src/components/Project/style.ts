@@ -20,6 +20,17 @@ export const Container = styled.div`
     height: 100%;
     color: ${props => props.theme.primary};
     padding: 1rem;
+    @media (max-width: 850px){
+        &, &.image-left{
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto auto;
+            grid-template-areas: 
+            "image"
+            "title"
+            "description"
+            "buttons";
+        }
+    }
 `;
 export const Title = styled.h3`
     grid-area: title;
@@ -33,16 +44,19 @@ export const Description = styled.p`
     justify-self: baseline;
     text-align: justify;
 `;
+const debug = (a : any) => {
+    console.log(a);
+}
 export const ImagesContainer = styled.div`
     overflow: hidden;
     grid-area: image;
-    min-height: 100%;
-    height: 30vw;
     width: 100%;
+    aspect-ratio: 16 / 9;
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
     ::-webkit-scrollbar{ height: 0px; }
+    
 `;
 export const Image = styled.img`
     width: 100%;

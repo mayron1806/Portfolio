@@ -9,7 +9,7 @@ export const Container = styled.section`
     transform: translateX(calc(100% - 55px));
     transition: 0.5s ease;
     &.active{
-        transform: translateX(-10px); 
+        transform: translateX(calc(0% - 5px));
     }
 `;  
 //rotate animation
