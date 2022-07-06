@@ -13,6 +13,10 @@ export const Text = styled.h1`
         font-size: 3.5rem;
         line-height: 4.3rem;
     }
+    @media (max-width: 450px){
+        font-size: 3rem;
+        line-height: 3.3rem;
+    }
 `;
 const textAnim = keyframes`
     0%{
@@ -34,5 +38,13 @@ export const Dinamic = styled.ul`
     overflow: hidden;
     li{
         animation: ${textAnim} 10s ease 1 forwards;
+    }
+    @media (max-width: 750px){
+        height: 5rem;
+        line-height: 5rem;
+    }
+    @media (max-width: 450px){
+        height: 4rem;
+        line-height: 4rem;
     }
 `;

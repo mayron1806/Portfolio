@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import {BiBrushAlt} from "react-icons/bi";
+
+import { BiBrushAlt } from "react-icons/bi";
+
 export const Container = styled.section`
     display: flex;
     align-items: center;

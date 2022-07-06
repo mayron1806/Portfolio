@@ -1,5 +1,5 @@
-import styled from "styled-components";
-
+import styled, { keyframes, css } from "styled-components";
+import {IoIosArrowDown} from "react-icons/io";
 export const Container = styled.div`
     height: 100%;
     max-width: 100%;
@@ -51,4 +51,39 @@ export const Link = styled.a`
         color: ${props => props.theme.primary};
         border: 2px solid ${props => props.theme.main};
     }
+`;
+const anim = keyframes`
+    0%{
+        transform: translateY(0); 
+    }
+    50%{
+        transform: translateY(-10px); 
+    }
+    100%{
+        transform: translateY(0);
+    }
+`;
+const scrollDownAnim = (delay: Number = 0) => {
+    return css`animation: ${anim} 1s ${delay}s  ease infinite `;
+}
+export const ScroolDown = styled.div`
+    position: absolute;
+    bottom: 0;
+    color: ${props => props.theme.gray};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &{ ${scrollDownAnim()} }
+    &.left{ left: 1%; }
+    &.right{ right: 1%; }
+    p{
+        font-size: 2rem;
+        writing-mode: vertical-rl;  
+        filter: drop-shadow(0 0 10px var(--shadow-color));
+        ${scrollDownAnim(0.2)}
+    }
+`;
+export const Arrow = styled(IoIosArrowDown)`
+    width: 30px;
+    height: 30px;
 `;

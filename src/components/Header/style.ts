@@ -8,6 +8,7 @@ export const Container = styled.header`
     border-bottom: 1px solid ${props => props.theme.gray};
     padding: 0 2rem; 
     z-index: 10;
+    position: fixed;
 `;
 
 const activeMenu = () => {

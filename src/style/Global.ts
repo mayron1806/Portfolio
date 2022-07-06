@@ -14,12 +14,6 @@ export default createGlobalStyle`
         scroll-behavior: smooth;
     }
     :root{
-        --blue: #0887DC;
-        --light-blue: #4DA6E1;
-        --white: #F5F5F5;
-        --gray: #D3D3D3;
-        --light-gray: #ECECEC;
-        --black: #1E1E1E;
-        --shadow-color: rgba(0, 0, 0, 0.5);
+        --shadow-color: rgba(0,0,0,0.2);
     }
 `;

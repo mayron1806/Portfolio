@@ -17,6 +17,9 @@ export const App = styled.div`
         align-items: flex-end;
         gap: 1rem;
     }
+    .content{
+        padding-top: 50px;
+    }
 `;
 export const Main = styled.main`
     height: calc(100vh - 50px);

@@ -14,7 +14,6 @@ import { BLUE_COLOR } from "./style/colors/blue";
 import { ThemeProvider } from "styled-components";
 
 import * as C from "./app.style";
-import Section from "./components/Section";
 import Contact from "./components/Contact";
 
 const App = ()=> { 
@@ -32,7 +31,7 @@ const App = ()=> {
         </div>
         {/* END SELECTORS */}
         {/* CONTENT */}
-        <div>
+        <div className="content">
           {/* MAIN */}
           <C.Main>
            <Home />
