@@ -89,7 +89,7 @@ export const Link = styled.a`
         content: "";
         position: absolute;
         transform: translate(-50%, -50%) scale(0);
-        width: 300px;
+        width: 110%;
         height: 300px;
         border-radius: 50%;
         background-color: ${props=> props.theme.primary};
