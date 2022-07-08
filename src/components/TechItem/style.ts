@@ -4,37 +4,39 @@ export const Container = styled.div`
     background-color: ${props => props.theme.primary};
     border-radius: 10px;
     padding: 2rem 1rem;
-    position: relative;
+    min-width: min(200px, calc(100vw - 4rem));
     height: 200px;
-    min-width: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-basis: 250px;
+    position: relative;
     transition: 0.5s;
     :hover{
-        height: 300px;
         transform: translateY(20px);
+        height: calc(100% - 40px);
     }
-    > img{
-        width: 120px;
-        height: 120px;
-        transition: 0.3s;
-        transition-delay: 0.3s;
-        position: absolute;
+    :hover > div{
+        transform: translateY(-40px);
+        opacity: 1;
     }
     :hover img{
         width: 150px;
         height: 150px;
-        transform: translateY(-40px);
     }
+    
 `;
-export const Content = styled.div`  
-    margin-top: 120px;
+export const Main = styled.div`
     width: 100%;
-    text-align: center;
-    overflow: hidden;
-    color: ${props => props.theme.secondary};
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+    > img{
+        width: 120px;
+        height: 120px;
+        transition: 0.3s;
+    }
     > h3{
         font-size: 3rem;
         font-weight: 500;
@@ -43,7 +45,21 @@ export const Content = styled.div`
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        text-align: center;
     }
+`;
+export const Content = styled.div`  
+    position: absolute;
+    padding: 0 1rem;
+    opacity: 0;
+    transform: translateY(100%);
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    transition-delay: 0.2s;
+    transition: 0.4s;
+    color: ${props => props.theme.secondary};
     > p{
         font-size: 1.6rem;
         display: -webkit-box;

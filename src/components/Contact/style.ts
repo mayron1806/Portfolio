@@ -148,11 +148,12 @@ export const ContactOptions = styled.div`
     flex-direction: column;
 `;
 export const Maps = styled.div`
-
+    aspect-ratio: 16/9;
+    width: 100%;
     @media (min-width: 750px) { aspect-ratio: 1/1; }
     @media (max-width: 750px) {
         width: 100%;
-        min-height: 300px;
+        max-height: 40%;
     }
 `;
 const icon = css`

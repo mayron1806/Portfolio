@@ -7,9 +7,11 @@ type props = {
 const TechItem = ({tech}: props) => {
     return(
         <C.Container>
-            <img src={tech.logo} alt="Tech icon" />
-            <C.Content className="content">
+            <C.Main>
+                <img src={tech.logo} alt="Tech icon" />
                 <h3>{tech.title}</h3>
+            </C.Main>
+            <C.Content className="description">
                 <p>{tech.description}</p>
                 <a href={tech.link} target="_blank">Saiba mais</a>
             </C.Content>

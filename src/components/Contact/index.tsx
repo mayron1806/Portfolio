@@ -150,7 +150,7 @@ const Contact = () => {
                 </C.Form>
                 <C.ContactOptions>
                     <C.Maps>
-                        <Map location={{lat: -19.43779334037327, lng: -44.2521030313986}}/>
+                        <Map location={{lat: -19.43796099566511, lng: -44.25209879298}}/>
                     </C.Maps>
                     <C.Items>
                         <C.InfoItem href="https://goo.gl/maps/yEPybMatrg6J5vNu8" target="_blank">

@@ -1,9 +1,11 @@
 import DinamicText from "../DinamicText";
+import Pivot from "../Pivot";
 import * as C from "./style";
 
 const Home = () => {
     return(
         <C.Container>
+            <Pivot id="home"/>
             <DinamicText phrases={["sou autodidata.","adoro aprender.","sou dev front-end."]} />
             <C.Link href="#">Contate-me</C.Link>
             <svg className="wave" width="1920" height="184" viewBox="0 0 1920 184" fill="none" xmlns="http://www.w3.org/2000/svg">
