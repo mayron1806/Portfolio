@@ -6,6 +6,7 @@ export const Container = styled.div`
     position: relative;
     .main{
         padding: 2rem 2rem;
+        position: relative;
         background-color: ${props => props.theme.main2};
     }
 `;

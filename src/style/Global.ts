@@ -15,5 +15,8 @@ export default createGlobalStyle`
     }
     :root{
         --shadow-color: rgba(0,0,0,0.2);
+        --green: #05d305;
+        --red: #ff0000;
+        --yellow: #ffdb29;
     }
 `;

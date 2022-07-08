@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-    padding: 0 2rem;
-`;
-export const Title = styled.h2`
+export const Container = styled.h2`
     font-size: 4rem;
     font-family: 'Roboto Slab', serif;
     color: ${props => props.theme.primary};
@@ -11,3 +8,10 @@ export const Title = styled.h2`
         font-size: 3rem;
     }
 `;
+type props = {
+    title: string
+}
+const Title = ({title} : props) => {
+    return <Container>{title}</Container>
+}
+export default Title;

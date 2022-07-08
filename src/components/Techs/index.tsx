@@ -3,7 +3,8 @@ import { TechsType, TechType } from "../../types/tech";
 import * as C from "./style";
 import TechItem from "../TechItem";
 import { getTechs } from "../../services/Tech";
-import Section from "../Section";
+import Title from "../Title";
+import Pivot from "../Pivot";
 
 enum Direction {
     LEFT,
@@ -44,25 +45,26 @@ const Techs = () => {
         scroll(techContainerRef.current, Direction.RIGHT);
     }
     return(
-        <Section title="Tecnologias">
+        <C.Container>
+            <Pivot id="tech"/>
+            <Title title="Tecnologias"/>
             <C.Content>
-            <C.TechsContent ref={techContainerRef}>
-                {
-                    !isLoading &&
-                    techs.map((tech, index)=> (
-                        <TechItem key={index} tech={tech}/>
-                    ))
-                    ||
-                    <C.Loading>Carregando</C.Loading>
-                }
-            </C.TechsContent>
-            <div>
-                <C.DownButton onClick={() => leftScroll()} />
-                <C.UpButton onClick={() => rightScroll()} />
-            </div>
-        </C.Content>
-        </Section>
-        
+                <C.TechsContent ref={techContainerRef}>
+                    {
+                        !isLoading &&
+                        techs.map((tech, index)=> (
+                            <TechItem key={index} tech={tech}/>
+                        ))
+                        ||
+                        <C.Loading>Carregando</C.Loading>
+                    }
+                </C.TechsContent>
+                <div>
+                    <C.DownButton onClick={() => leftScroll()} />
+                    <C.UpButton onClick={() => rightScroll()} />
+                </div>
+            </C.Content>
+        </C.Container>
     )
 }
 export default Techs;

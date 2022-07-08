@@ -1,7 +1,12 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import {AiOutlineMail} from "react-icons/ai";
 import {GoLocation} from "react-icons/go";
 import {IoLogoWhatsapp} from "react-icons/io5";
+
+export const Container = styled.div`
+    padding: 0 2rem;
+    position: relative;
+`;
 export const Content = styled.div`
     color: ${props => props.theme.primary};
     display: grid;
@@ -33,6 +38,11 @@ export const Form = styled.form`
     gap: 2rem;
     align-items: flex-end;
 `;
+const vibrateAnim = keyframes`
+    0%, 50%{ transform: translateX(-10px); }
+    25%, 75%{ transform: translateX(10px); }
+    100%{ transform: translateX(0px); }
+`;
 export const Input = styled.div`
     width: 100%;
     position: relative;
@@ -58,7 +68,8 @@ export const Input = styled.div`
         color: ${props => props.theme.primary};
         transition: 0.5s;
         &.error{
-            border-color: red;
+            border-color: var(--red);
+            animation: ${vibrateAnim} 0.2s linear;
         }
     }
     textarea{
@@ -74,10 +85,25 @@ export const Input = styled.div`
         }
     }
 `;
-export const ErrorMessage = styled.p`
+export enum messageType {
+    ERROR,
+    SUCESS,
+    WAITING
+}
+const color = (type: messageType) => {
+    switch(type){
+        case messageType.ERROR:
+            return css`color: var(--red);`;
+        case messageType.SUCESS:
+            return css`color: var(--green);`;
+        case messageType.WAITING:
+            return css`color: var(--yellow);`;
+    }
+}
+export const Message = styled.p<{type : messageType}>`
     align-self: flex-start;
-    color: red;
     font-size: 1.6rem;
+    ${props => color(props.type)}
 `;
 export const Submit = styled.button`
     position: relative;

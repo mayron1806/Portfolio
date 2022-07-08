@@ -2,6 +2,10 @@ import styled, { css, keyframes } from "styled-components";
 
 import {IoIosArrowForward, IoIosArrowBack} from "react-icons/io";
 
+export const Container = styled.div`
+    padding: 0 2rem;
+    position: relative;
+`;
 export const Content = styled.div`
     position: relative;
     height: 370px;
