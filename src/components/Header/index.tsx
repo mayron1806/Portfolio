@@ -48,10 +48,10 @@ const Header = () => {
                     ><a href="#contact">Contato</a></C.MenuOption>
                 </C.Menu>
                 <C.SocialMedia>
-                    <a href="#">
+                    <a href="https://www.linkedin.com/in/mayron-fernandes/" target="_blank">
                         <C.LinkedInIcon />
                     </a>
-                    <a href="#">
+                    <a href="https://github.com/mayron1806" target="_blank">
                         <C.GitHubIcon />
                     </a>
                 </C.SocialMedia>

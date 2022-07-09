@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 import {AiOutlineGithub, AiFillLinkedin} from "react-icons/ai";
 
 export const Container = styled.div`
@@ -7,7 +7,7 @@ export const Container = styled.div`
     .main{
         padding: 2rem 2rem;
         position: relative;
-        background-color: ${props => props.theme.main2};
+        background-color: ${props => props.theme.primary};
     }
 `;
 export const Wave = styled.div`
@@ -20,7 +20,7 @@ export const Wave = styled.div`
         height: 100%;
         transform: translateY(5px);
         path{
-            fill: ${props=> props.theme.main2};
+            fill: ${props=> props.theme.primary};
         }
     }
     &.reverse{
@@ -30,7 +30,7 @@ export const Wave = styled.div`
 export const Title = styled.h2`
     font-size: 4rem;
     font-family: 'Roboto Slab', serif;
-    color: ${props => props.theme.primary};
+    color: ${props => props.theme.secondary};
 `;
 export const Content = styled.div`
     margin: 2rem 3rem;
@@ -63,7 +63,7 @@ export const Info = styled.div`
     }
 `;
 export const Text = styled.div`
-    color: ${props => props.theme.primary};
+    color: ${props => props.theme.secondary};
     h3{
         font-size: 3rem;
         font-weight: 500;

@@ -1,12 +1,14 @@
 import * as C from "./style";
 import { useEffect, useRef, useState } from "react";
 type props = {
+    title: string,
+    description: string
     siteURL?: string,
     gitURL?: string,
     imageLeft?: boolean,
     imagesURL?: string[]
 }
-const Project = ({siteURL, gitURL, imagesURL = [] ,imageLeft = false}: props) => {
+const Project = ({title, description, siteURL, gitURL, imagesURL = [] ,imageLeft = false}: props) => {
     // carrousel
     const [carrouselIndex, setCarrouselIndex] = useState<number>(0);
 
@@ -28,22 +30,16 @@ const Project = ({siteURL, gitURL, imagesURL = [] ,imageLeft = false}: props) =>
 
     return(
         <C.Container className={imageLeft ? "image-left" : ""}>
-            <C.Title>Nome do projeto</C.Title>
-            <C.Description>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi perferendis facere impedit 
-                consequuntur error consectetur deserunt dolorum fuga quod sed nobis accusamus neque possimus
-                porro, inventore illo libero sequi repudiandae?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi perferendis facere impedit 
-                consequuntur error consectetur deserunt dolorum fuga quod sed nobis accusamus neque possimus
-                porro, inventore illo libero sequi repudiandae?
-            </C.Description>
+            <C.Title>{title}</C.Title>
+            <C.Description>{description}</C.Description>
             <C.Buttons>
-                { siteURL && <C.Link>Site ao vivo</C.Link> }
-                { gitURL && <C.Link>GitHub</C.Link> }
+                { siteURL && <C.Link href={siteURL} target="_blank">Site ao vivo</C.Link> }
+                { gitURL && <C.Link href={gitURL} target="_blank">GitHub</C.Link> }
             </C.Buttons>
             <C.ImagesContainer ref={imagemContainerRef}>
-                {
-                    imagesURL.map((img, index) => (<C.Image key={index} src={img}/>))
-                } 
+            {
+                imagesURL.map((img, index) => (<C.Image key={index} src={img}/>))
+            } 
             </C.ImagesContainer>
         </C.Container>
     )

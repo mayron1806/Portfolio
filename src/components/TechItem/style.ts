@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     background-color: ${props => props.theme.primary};
+    color: ${props => props.theme.secondary};
     border-radius: 10px;
     padding: 2rem 1rem;
     min-width: min(200px, calc(100vw - 4rem));
@@ -59,7 +60,6 @@ export const Content = styled.div`
     overflow: hidden;
     transition-delay: 0.2s;
     transition: 0.4s;
-    color: ${props => props.theme.secondary};
     > p{
         font-size: 1.6rem;
         display: -webkit-box;

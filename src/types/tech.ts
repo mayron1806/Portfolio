@@ -1,5 +1,5 @@
 export type TechType = {
-    order:number,
+    order: number,
     logo: string,
     title: string,
     description: string,

@@ -29,10 +29,12 @@ const Techs = () => {
             // ordena o array de acordo com a propriedade "order" do objeto
             res.sort((a : TechType, b : TechType) => a.order - b.order);
             setTechs(res);
-            setIsLoading(false);
         })  
         .catch(error =>{
             console.log(error)
+        })
+        .finally(()=>{
+            setIsLoading(false);
         })
     }, [])
     

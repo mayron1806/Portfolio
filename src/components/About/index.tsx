@@ -1,6 +1,4 @@
-import Section from "../Title";
 import * as C from "./style";
-import image from "../../assets/project-image.png";
 import Title from "../Title";
 import Pivot from "../Pivot";
 const About = () => {
@@ -13,43 +11,28 @@ const About = () => {
             </C.Wave>
             <div className="main">
                 <Pivot id="about"/>
-                <Title title="Sobre mim"/>
+                <Title reverseColor={true} title="Sobre mim"/>
                 <C.Content>
-                    <C.Image src={image}/>
+                    <C.Image />
                     <C.Info>
                         <C.Text>
                             <h3>Eu sou Mayron</h3>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Earum quos ipsa facilis voluptas sunt quia totam fugiat animi. 
-                                Fuga est vitae deserunt quaerat rem culpa numquam nihil provident molestiae? 
-                                Numquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Earum quos ipsa facilis voluptas sunt quia totam fugiat animi. 
-                                Fuga est vitae deserunt quaerat rem culpa numquam nihil provident molestiae? 
-                                Numquam?
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Earum quos ipsa facilis voluptas sunt quia totam fugiat animi. 
-                                Fuga est vitae deserunt quaerat rem culpa numquam nihil provident molestiae? 
-                                Numquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Earum quos ipsa facilis voluptas sunt quia totam fugiat animi. 
-                                Fuga est vitae deserunt quaerat rem culpa numquam nihil provident molestiae? 
-                                Numquam?
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Earum quos ipsa facilis voluptas sunt quia totam fugiat animi. 
-                                Fuga est vitae deserunt quaerat rem culpa numquam nihil provident molestiae? 
-                                Numquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Earum quos ipsa facilis voluptas sunt quia totam fugiat animi. 
-                                Fuga est vitae deserunt quaerat rem culpa numquam nihil provident molestiae? 
-                                Numquam?
-                                
+                            Há certa de 2 anos eu conheci a programação e me identifiquei muito com a área.
+                            Comecei estudando C# para desenvolver jogos na unity. Depois de 1 ano comecei a 
+                            estudar desenvolvimento web e desde então tenho focado nessa área.<br/>
+                            Gosto de aprofundar meus conhecimentos nas tecnologias e evoluir cada vez mais.<br/>
+                            Atualmente desenvolvo projetos em ReactJS, TypeScript e Firebase, além disso 
+                            possuo experiência em consumo de API como: "ViaCEP" e "jikan API". E atualmente estou 
+                            estudando express e mongodb, para alcançar meu desejado fullstack.
                             </p>
                         </C.Text>
                         <div className="button-container">
-                            <C.Button backgroundColor="#24292D" href="#">
+                            <C.Button backgroundColor="#24292D" target="_blank" href="https://www.linkedin.com/in/mayron-fernandes/">
                                 <C.GitHubIcon/>
                                 GitHub
                             </C.Button>
-                            <C.Button backgroundColor="#0077B5" href="#">
+                            <C.Button backgroundColor="#0077B5" target="_blank" href="https://github.com/mayron1806">
                                 <C.LinkedInIcon/>
                                 LinkedIn
                             </C.Button>
