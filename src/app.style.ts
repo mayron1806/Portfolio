@@ -11,7 +11,7 @@ export const App = styled.div`
         top: 50%;
         transform: translateY(-50%);
         right: 0;
-        z-index: 10;
+        z-index: 100;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
