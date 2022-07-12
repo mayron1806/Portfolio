@@ -7,7 +7,7 @@ export const Container = styled.header`
     background-color: ${props => props.theme.primary};
     border-bottom: 1px solid ${props => props.theme.gray};
     padding: 0 2rem; 
-    z-index: 10;
+    z-index: 100;
     position: fixed;
 `;
 

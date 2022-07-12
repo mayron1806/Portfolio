@@ -15,11 +15,11 @@ import { ThemeProvider } from "styled-components";
 
 import * as C from "./app.style";
 import Contact from "./components/Contact";
+import useLocalState from "./hooks/useLocalState";
 
 const App = ()=> { 
-  const [currentTheme, setCurrentTheme] = useState<ThemeType>(LIGHT_THEME);
-  const [currentColor, setCurrentColor] = useState<ColorType>(BLUE_COLOR);
-
+  const {state: currentTheme, setState: setCurrentTheme} = useLocalState<ThemeType>("theme", LIGHT_THEME);
+  const {state: currentColor, setState: setCurrentColor} = useLocalState<ColorType>("color", BLUE_COLOR);
   return (
     <ThemeProvider theme={{...currentColor, ...currentTheme}}>
       <C.App>

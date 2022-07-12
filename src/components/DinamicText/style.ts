@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
 export const Text = styled.h1`
-    color: ${props => props.theme.secondary};
+    color: ${props => props.theme.main};
     font-family: 'Roboto Slab', serif;
     font-size: 5rem;
     line-height: 5.8rem;

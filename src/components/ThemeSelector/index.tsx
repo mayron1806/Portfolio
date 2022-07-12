@@ -3,6 +3,7 @@ import * as C from "./style";
 import { DARK_THEME } from "../../style/theme/dark";
 import { LIGHT_THEME } from "../../style/theme/light";
 import { ThemeType } from "../../types/theme";
+import deepCompare from "../../utils/DeepCompare";
 
 type props ={
     currentTheme: ThemeType,
@@ -14,8 +15,6 @@ const ThemeSelector = ({currentTheme, setCurrentTheme} :props) => {
     const setDarkTheme = () => setCurrentTheme(DARK_THEME);
     const setLightTheme = ()=> setCurrentTheme(LIGHT_THEME);
     
-    const activeTheme = (theme: ThemeType) => theme === currentTheme
-    
     return(
         <C.Container className={active ? "active" : ""}>
             <C.Head 
@@ -24,11 +23,11 @@ const ThemeSelector = ({currentTheme, setCurrentTheme} :props) => {
             />
             <C.Content>
                 <C.Dark
-                    className={activeTheme(DARK_THEME) ? "active" : ""} 
+                    className={deepCompare(DARK_THEME, currentTheme) ? "active" : ""} 
                     onClick={()=> setDarkTheme()}
                 />
                 <C.Light 
-                    className={activeTheme(LIGHT_THEME) ? "active" : ""} 
+                    className={deepCompare(LIGHT_THEME, currentTheme) ? "active" : ""} 
                     onClick={()=> setLightTheme()}
                     />
             </C.Content>
