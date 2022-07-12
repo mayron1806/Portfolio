@@ -17,7 +17,7 @@ export const Content = styled.div`
     "form contact";
     padding-bottom: 5rem;
     @media (max-width: 850px){
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 50% 1fr;
     }
     @media (max-width: 750px){
         grid-template-columns: 1fr;
@@ -146,14 +146,14 @@ export const ContactOptions = styled.div`
     grid-area: contact;
     display: flex;
     flex-direction: column;
+    width: 100%;
 `;
 export const Maps = styled.div`
     aspect-ratio: 16/9;
     width: 100%;
-    @media (min-width: 750px) { aspect-ratio: 1/1; }
     @media (max-width: 750px) {
+        aspect-ratio: 16/9;
         width: 100%;
-        max-height: 40%;
     }
 `;
 const icon = css`

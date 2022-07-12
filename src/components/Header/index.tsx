@@ -26,6 +26,7 @@ const Header = () => {
         }
         // ativa o elemento que foi clicado
         option.classList.add("selected");
+        setMobileMenuActive(false);
     }
     return(
         <C.Container>
