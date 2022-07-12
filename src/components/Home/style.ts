@@ -97,7 +97,7 @@ const anim = keyframes`
         transform: translateY(0);
     }
 `;
-const scrollDownAnim = (delay: Number = 0) => {
+const scrollDownAnim = (delay: number = 0) => {
     return css`animation: ${anim} 1s ${delay}s  ease infinite `;
 }
 export const ScroolDown = styled.div`
@@ -108,7 +108,9 @@ export const ScroolDown = styled.div`
     flex-direction: column;
     align-items: center;
     z-index: 10;
-    &{ ${scrollDownAnim()} }
+    &{ 
+        ${scrollDownAnim()}
+    }
     &.left{ left: 1%; }
     &.right{ right: 1%; }
     p{
