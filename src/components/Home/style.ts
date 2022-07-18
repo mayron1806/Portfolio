@@ -66,6 +66,7 @@ export const Link = styled.a`
     position: relative;
     overflow: hidden;
     z-index: 1;
+    backdrop-filter: blur(2px);
     ::before{
         content: "";
         position: absolute;

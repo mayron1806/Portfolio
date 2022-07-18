@@ -5,7 +5,6 @@ export const Container = styled.header`
     width: 100%;
     height: 50px;
     background-color: ${props => props.theme.primary};
-    border-bottom: 1px solid ${props => props.theme.gray};
     padding: 0 2rem; 
     z-index: 100;
     position: fixed;

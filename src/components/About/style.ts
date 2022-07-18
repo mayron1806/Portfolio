@@ -77,7 +77,7 @@ export const Text = styled.div`
 `;
 export const Button = styled.a<{backgroundColor: string}>`
     background-color: ${props => props.backgroundColor};
-    color: ${props => props.theme.primary};
+    color: #F5F5F5;
     width: 100%;
     padding: 1rem;
     border-radius: 10px;

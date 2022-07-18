@@ -52,18 +52,18 @@ export const Loading = styled.h2`
     }
 `;
 const icon = css`
-    width: 5rem;
-    height: 5rem;
+    width: 3rem;
+    height: 3rem;
     cursor: pointer;
-    color: ${props => props.theme.gray};
+    color: ${props => props.theme.primary};
+    background-color: ${props => props.theme.secondary};
+    border-radius: 50%;
     position: absolute;
-    height: 100%;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     transition: 0.5s;
     :hover{
-        color: ${props => props.theme.main};
-        filter: drop-shadow(0 0 4px ${props => props.theme.gray});
-        transform: scale(1.2);
+        filter: drop-shadow(0 0 4px ${props => props.theme.secondary});
     }
 `;
 export const DownButton = styled(IoIosArrowBack)`
