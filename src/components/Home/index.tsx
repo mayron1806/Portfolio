@@ -8,9 +8,9 @@ const Home = () => {
             <div className="text">
                 <Pivot id="home"/>
                 <DinamicText phrases={["sou autodidata.","adoro aprender.","sou dev front-end."]} />
-                <C.Link href="#">Contate-me</C.Link>
+                <C.Link href="#contact">Contate-me</C.Link>
             </div>
-            <video autoPlay loop muted>
+            <video autoPlay loop muted disablePictureInPicture>
                 <source src={bg_video} type="video/mp4"/>
             </video>
             <svg className="wave" width="1920" height="184" viewBox="0 0 1920 184" fill="none" xmlns="http://www.w3.org/2000/svg">

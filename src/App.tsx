@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Header from "./components/Header"
 import Techs from "./components/Techs";
@@ -20,6 +20,7 @@ import useLocalState from "./hooks/useLocalState";
 const App = ()=> { 
   const {state: currentTheme, setState: setCurrentTheme} = useLocalState<ThemeType>("theme", LIGHT_THEME);
   const {state: currentColor, setState: setCurrentColor} = useLocalState<ColorType>("color", BLUE_COLOR);
+ 
   return (
     <ThemeProvider theme={{...currentColor, ...currentTheme}}>
       <C.App>
