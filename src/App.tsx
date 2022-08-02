@@ -16,6 +16,7 @@ import { ThemeProvider } from "styled-components";
 import * as C from "./app.style";
 import Contact from "./components/Contact";
 import useLocalState from "./hooks/useLocalState";
+import Footer from "./components/Footer";
 
 const App = ()=> { 
   const {state: currentTheme, setState: setCurrentTheme} = useLocalState<ThemeType>("theme", LIGHT_THEME);
@@ -44,6 +45,7 @@ const App = ()=> {
           <Contact/>
         </div>
         {/* END CONTENT */}
+        <Footer />
       </C.App>
     </ThemeProvider>
   )

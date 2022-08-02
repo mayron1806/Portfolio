@@ -101,11 +101,10 @@ const Contact = () => {
             <Title title="Contato "/>
             <C.Content>
                 <C.Text>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Earum quos ipsa facilis voluptas sunt quia totam fugiat animi. 
-                    Fuga est vitae deserunt quaerat rem culpa numquam nihil provident 
-                    molestiae? Numquam Fuga est vitae deserunt quaerat rem culpa numquam nihil provident 
-                    molestiae? Numquam
+                  Gostou do meu trabalho? Se quiser entrar em contato comigo é bem simples,
+                  basta preencher o formulario abaixo e aguardar, vou tentar responder o mais rapido
+                  possível. Mas se você quiser me chamar no WhatsApp, enviar um email de forma tradicional,
+                  ou até mesmo descobrir onde é minha residência e so clicar nos links abaixo.
                 </C.Text>
                 <C.Form onSubmit={(e)=> submitForm(e)} ref={formRef}> 
                     <C.Input className={isActive(name) ? "active" : ""}>
